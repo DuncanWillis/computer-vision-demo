@@ -200,7 +200,7 @@ deployments:
   - name: Max Vehicle Window
     application: Max Vehicles
     deploymentType: Service
-    version: 595b8500e9b572abf15a35f80180cb60e71521c4
+    version: f7a81a318153265a97607dfd29242c4f18cb0a33
     resources:
       cpu: 500
       memory: 200
@@ -220,6 +220,11 @@ deployments:
         description: ''
         required: false
         value: max-vehicles
+      - name: output2
+        inputType: OutputTopic
+        description: ''
+        required: false
+        value: max-vehicles-agg
   - name: Data Buffer
     application: Data Buffer
     deploymentType: Service
