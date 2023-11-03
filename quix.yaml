@@ -73,12 +73,12 @@ deployments:
         inputType: Secret
         description: ''
         required: true
-        value: GoogleMapsApiKey
+        secretKey: GoogleMapsApiKey
       - name: bearerToken
         inputType: Secret
         description: ''
         required: true
-        value: bearerToken
+        secretKey: bearerToken
   - name: Frame Grabber
     application: TfL traffic camera frame grabber
     deploymentType: Service
@@ -290,7 +290,7 @@ deployments:
         inputType: Secret
         description: Your TfL API key
         required: false
-        value: tfl_api_key
+        secretKey: tfl_api_key
       - name: sleep_interval
         inputType: FreeText
         description: ''
@@ -360,3 +360,10 @@ topics:
       replicationFactor: 2
       retentionInMinutes: 60
       retentionInBytes: 51200
+  - name: max-vehicles-agg
+    persisted: false
+    configuration:
+      partitions: 1
+      replicationFactor: 2
+      retentionInMinutes: 1440
+      retentionInBytes: 52428800
